@@ -161,7 +161,7 @@ st.markdown('''
 
 df_vs_2 = df_vs.copy()
 df_vs_2['method'] = df_vs_2.method.map({'nn': '神经网络', 'xgb': 'XGBoost', '2p': '双参模型'})
-st.write(df_vs_2)
+# st.write(df_vs_2)
 df_vs_2.columns = ['建模方法', 'R方']
 fig_bar_r2 = px.bar(
     df_vs_2, x='建模方法', y='R方', color='建模方法', range_y=[0, 1],
